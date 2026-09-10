@@ -7,6 +7,7 @@ Demonstrar como transformar dados brutos em decisões de negócios através de u
 A arquitetura do projeto foi desenhada seguindo princípios de responsabilidade única e otimização de memória, dividida em três pilares fundamentais:Ingestão e Armazenamento (SQLite3): Os dados originais em formato .csv (extraídos do Kaggle) foram modelados e indexados dentro de um banco de dados relacional local (.db).Otimização de Performance (Abordagem Híbrida): Este projeto utiliza queries SQL dinâmicas armazenadas em variáveis para filtrar e agregar os dados diretamente no motor do banco de dados. O Pandas é acionado exclusivamente na camada final para estruturar os dados que alimentam os gráficos.CRUD Componentizado (POO): Cada gráfico do dashboard é uma instância de uma classe herdada. Isso permite que cada componente visual gerencie seu próprio ciclo de vida através de métodos específicos:Read: Busca os dados atualizados via SQL.Update: Modifica a query dinamicamente com base nos filtros do usuário.Delete/Toggle: Manipula a visibilidade e o layout do componente na interface.
 
 # 📂 Estrutura do Repositório
+```
 text├── database/
 │   └── ecommerce.db          # Banco de Dados SQLite3 com as tabelas indexadas
 ├── src/
@@ -18,6 +19,7 @@ text├── database/
 ├── app.py                    # Arquivo principal de execução do Streamlit
 ├── requirements.txt          # Dependências do projeto
 └── README.md                 # Documentação
+```
 
 # 🚀 Tecnologias Utilizadas
 Python 3.x como linguagem core.Streamlit para a construção da interface web interativa.SQLite3 para o gerenciamento e persistência de dados estruturados.Pandas para manipulação fina de matrizes de dados.Matplotlib & Seaborn para a criação de data visualizations limpas e profissionais.
