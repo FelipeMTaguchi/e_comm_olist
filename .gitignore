@@ -224,3 +224,11 @@ data_raw/
 # Venv:
 .venv/
 
+brazil_states.geojson
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# VS Code layout
+.vscode/
